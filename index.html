@@ -170,7 +170,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-03-19 00:06:40 / Modified: 01:14:12" itemprop="dateCreated datePublished" datetime="2022-03-19T00:06:40+08:00">2022-03-19</time>
+              <time title="Created: 2022-03-19 00:06:40 / Modified: 01:45:06" itemprop="dateCreated datePublished" datetime="2022-03-19T00:06:40+08:00">2022-03-19</time>
             </span>
 
           
@@ -193,7 +193,7 @@
 <h1 id="Hexo安装及初始化"><a href="#Hexo安装及初始化" class="headerlink" title="Hexo安装及初始化"></a><code>Hexo</code>安装及初始化</h1><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>是搭建个人网站的框架，安装方式如下</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 安装hexo</span></span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"></span><br><span class="line"><span class="comment">## cd到希望建立博客的文件夹目录下, 初始化blog文件夹</span></span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure>
 
-<h1 id="Hexo本地使用"><a href="#Hexo本地使用" class="headerlink" title="Hexo本地使用"></a><code>Hexo</code>本地使用</h1><h2 id="Hexo基本使用命令"><a href="#Hexo基本使用命令" class="headerlink" title="Hexo基本使用命令"></a><code>Hexo</code>基本使用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 新建一篇博客</span></span><br><span class="line">hexo n my_first_site</span><br><span class="line"></span><br><span class="line"><span class="comment">## 生成静态文件</span></span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line"><span class="comment">## 本地运行server</span></span><br><span class="line">hexo s</span><br><span class="line"></span><br><span class="line"><span class="comment">## 清除缓存</span></span><br><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<h1 id="Hexo本地使用"><a href="#Hexo本地使用" class="headerlink" title="Hexo本地使用"></a><code>Hexo</code>本地使用</h1><h2 id="Hexo基本使用命令"><a href="#Hexo基本使用命令" class="headerlink" title="Hexo基本使用命令"></a><code>Hexo</code>基本使用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 新建一篇博客</span></span><br><span class="line">hexo n my_first_site</span><br><span class="line"><span class="comment"># hexo new post --path filepath name  # 指定生成md的地址</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 生成静态文件</span></span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line"><span class="comment">## 本地运行server</span></span><br><span class="line">hexo s</span><br><span class="line"></span><br><span class="line"><span class="comment">## 清除缓存</span></span><br><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>运行完<code>hexo n my_first_site</code>后，可以在 <code>blog/source/_posts</code>文件夹下发现多了一个<code>my_first_site.md</code>文件，此文件即我们编辑网页内容的主要源文件</p>
 </li>
@@ -213,6 +213,13 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 部署网页</span></span><br><span class="line">Hexo d</span><br></pre></td></tr></table></figure>
 
 <p>这样最简单的网页部署就完成了，后面只需要修改<code>blog/source/_posts/*.md</code>文件即可。</p>
+<h1 id="Hexo高级配置"><a href="#Hexo高级配置" class="headerlink" title="Hexo高级配置"></a><code>Hexo</code>高级配置</h1><h2 id="文章分类放置"><a href="#文章分类放置" class="headerlink" title="文章分类放置"></a>文章分类放置</h2><p>通过修改配置文件<code>blog/_config.yml</code>中的<code>new_post_name</code>来让创建的文件按照时间分类，也可以按照(<code>hexo new post --path filepath name</code>)来创建，示例如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">new_post_name: :year/:month/:title.md <span class="comment"># File name of new posts</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
 
       
     </div>
